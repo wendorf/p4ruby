@@ -40,7 +40,8 @@ class Installer
     Dir.chdir(get_ruby_build_dir)
     puts `yes | ruby p4conf.rb -d #{api_dir}`
     puts `make`
-    puts `ruby test.b`
+    puts `perl -pi -e 's/cppflags/CFLAGS/g' Makefile`
+    #puts `ruby test.b`
     puts `make install`
     #TODO Deal with known issue wheree we have to ignore -Werror in Makefile
     Dir.chdir(wd)
