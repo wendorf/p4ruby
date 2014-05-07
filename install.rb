@@ -103,6 +103,7 @@ class P4Ruby_FTP
 
   def initialize(platform)
     @ftp = Net::FTP.new(FTP_SERVER)
+    @ftp.passive = true
     @ftp.login
     @ftp.chdir(TOP_DIR)
 
