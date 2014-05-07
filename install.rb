@@ -1,5 +1,3 @@
-require 'pry'
-
 require 'net/ftp'
 require 'rbconfig'
 require 'zlib'
