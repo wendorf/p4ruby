@@ -42,7 +42,7 @@ class Installer
     puts `make`
     puts `perl -pi -e 's/cppflags/CFLAGS/g' Makefile`
     #puts `ruby test.b`
-    #puts `make install`
+    puts `make install`
     puts `cp P4.so ../../lib`
     #TODO Deal with known issue wheree we have to ignore -Werror in Makefile
     Dir.chdir(wd)
